@@ -63,6 +63,15 @@
 </head>
 
 <body>
+
+   
+    <!-- Theme Toggle Button -->
+<button id="themeToggle" title="Toggle Theme">
+  <span id="themeIcon">🌙</span>
+</button>
+
+
+
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
     <div class="container">
@@ -127,6 +136,15 @@
         
     </div>
 
+        <div id="thankYouPopup" class="popup">
+            <div class="popup-content">
+                <h2>Thank You!</h2>
+                <p>We’ve received your message. We'll get back to you soon.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+
 
     <div class="container">
   <form action="https://formsubmit.co/itsmevascoXD@gmail.com" method="POST">
@@ -158,6 +176,9 @@
     <input type="hidden" name="_next" value="https://vascoxd.w3spaces.com/thankyou.html">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_autoresponse" value="Thank you! We'll get back to you soon.">
+    <form action="https://formsubmit.co/sudhamaniammak123@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://vascoxd.w3spaces.com/thankyou.html">
+
 
     <br><br>
 
@@ -167,13 +188,44 @@
 </div>
 
 
+<div style="text-align: center; margin-bottom: 20px;">
+  <a href="about.html" style="color: #888; text-decoration: none; font-size: 18px;">
+    About Us
+  </a>
+</div>
+
 
       
 
       <footer style="text-align:center; margin-top: 20px; color: #888;">
         © 2025 Sreyas S Nair. All rights reserved.
       </footer>
-      
+
+
+<script>
+  const toggleBtn = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+  const body = document.body;
+
+  // Load previously saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    body.classList.add("light-theme");
+    themeIcon.textContent = "☀️";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+    const isLight = body.classList.contains("light-theme");
+
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+    themeIcon.textContent = isLight ? "☀️" : "🌙";
+  });
+</script>
+
+
+
+    
 </body>
 
 </html>
