@@ -9,7 +9,13 @@
   cursor: pointer;
   z-index: 999;
   color: white;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+#themeToggle:hover,
+#themeToggle:focus {
+  opacity: 0.8;
+  outline: none;
 }
 
 /* Light theme styles */
@@ -31,3 +37,5 @@ body.light-theme #myBtn {
 body.light-theme #themeToggle {
   color: #333;
 }
+
+
