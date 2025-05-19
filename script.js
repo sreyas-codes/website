@@ -28,3 +28,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+<script>
+  const form = document.querySelector("form");
+  const popup = document.getElementById("thankYouPopup");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Send the form using FormSubmit
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        popup.style.display = "flex"; // Show popup
+        form.reset(); // Optional: clear form
+      } else {
+        alert("There was an error. Please try again.");
+      }
+    })
+    .catch(error => {
+      alert("Network error. Please try again.");
+    });
+  });
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+</script>
