@@ -28,20 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-window.onscroll = function () {
-  document.getElementById("myBtn").style.display =
-    document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
-      ? "block"
-      : "none";
-};
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-
-
 <script>
   const form = document.querySelector("form");
   const popup = document.getElementById("thankYouPopup");
