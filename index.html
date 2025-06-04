@@ -157,31 +157,40 @@
       </a>
     </div>
 
- <footer style="text-align:center; margin-top: 20px; color: #888;">
+    <div style="text-align: centre; margin-bottom: 20px;">
+        <a href="sreyas-codes.github.io/productpagetest" style="color: #888; text-decoration: none; font-size: 18px;">
+            Projects
+        </a>
+    </div>
+
+     <footer style="text-align:center; margin-top: 20px; color: #888;">
         © 2025 Sreyas S Nair. All rights reserved.
       </footer>
 
 
-<script>
-  const toggleBtn = document.getElementById("themeToggle");
-  const themeIcon = document.getElementById("themeIcon");
-  const body = document.body;
+    <script>
+      const toggleBtn = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+      const body = document.body;
 
-  // Load previously saved theme
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-    body.classList.add("light-theme");
-    themeIcon.textContent = "☀️";
-  }
+      // Load previously saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        body.classList.add("light-theme");
+        themeIcon.textContent = "☀️";
+      }   
 
-  toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("light-theme");
-    const isLight = body.classList.contains("light-theme");
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        const isLight = body.classList.contains("light-theme");
 
-    localStorage.setItem("theme", isLight ? "light" : "dark");
-    themeIcon.textContent = isLight ? "☀️" : "🌙";
-  });
-</script>
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+        themeIcon.textContent = isLight ? "☀️" : "🌙";
+      });
+    </script>
+
+</html>
+    
 
 
 
