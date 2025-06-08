@@ -1,0 +1,41 @@
+/* Theme toggle button */
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+  color: white;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+#themeToggle:hover,
+#themeToggle:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
+/* Light theme styles */
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+body.light-theme .container {
+  background-color: #ffffff;
+}
+
+body.light-theme input[type="submit"],
+body.light-theme #myBtn {
+  background-color: #3498db;
+  color: white;
+}
+
+body.light-theme #themeToggle {
+  color: #333;
+}
+
+
