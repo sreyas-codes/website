@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-<script>
+
   const form = document.querySelector("form");
   const popup = document.getElementById("thankYouPopup");
 
@@ -61,4 +61,4 @@ document.addEventListener("DOMContentLoaded", function () {
   function closePopup() {
     popup.style.display = "none";
   }
-</script>
+
