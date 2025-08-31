@@ -64,36 +64,40 @@
             vertical-align: middle;
         }
 
-        .navbar {
-            background-color: #1a1a1a;
-            padding: 10px 0;
-            text-align: center;
+        .nav{
+            background-color: #434242;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
-        
-        .nav-menu {
+
+        .nav ul {
             list-style: none;
             margin: 0;
-            padding: 0;
-            display: inline-flex;
-            gap: 30px;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 90px;
+            
         }
-        
-        .nav-menu li {
-            position: relative;
-        }
-        
-        .nav-menu a {
-            text-decoration: none;
+
+        .nav a {
             color: #E0E0E0;
-            font-size: 18px;
+            text-decoration: none;
+            font-size: 20px;
             font-weight: bold;
-            padding: 10px 15px;
-            display: block;
-            background-color: #232323;
-            border: 2px solid #131313;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: color 0.3s ease;
+            border: 3px solid #000000;
+            background-color: #000000;
         }
-        
-        .nav-menu a:hover {
+
+        .nav li {
+            display: inline;
+        }
+
+        .nav a:hover {
             color: #00BFFF;
         }
         
