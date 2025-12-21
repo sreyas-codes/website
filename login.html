@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<input type="email" id="email" placeholder="Email"><br><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+<button onclick="login()">Login</button>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyC96MDkRxEoO-GHUMhVX2NDpPi6bvAi68Q",
+    authDomain: "codes-1ea4c.firebaseapp.com",
+    projectId: "codes-1ea4c",
+    appId: "1:101809217858:web:e7133fe4a7e3c2e0f6a8db"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  window.login = function () {
+    signInWithEmailAndPassword(
+      auth,
+      email.value,
+      password.value
+    )
+    .then(() => window.location.href = "about.html")
+    .catch(err => alert(err.message));
+  };
+</script>
+
+</body>
+</html>
